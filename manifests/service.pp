@@ -14,13 +14,13 @@ class haproxy::service
       require => Package[$haproxy::packages::haproxy_packages],
     }
   }
-  else
-  {
+#  else
+#  {
     #### Disable the services
-    service { 'haproxy':
-      ensure  => stopped,
-      enable  => false,
-      require => Package[$haproxy::packages::haproxy_packages],
-    }
-  }
+#    service { 'haproxy':
+#      ensure  => stopped,
+#      enable  => false,
+#      require => Package[$haproxy::packages::haproxy_packages],
+#    }
+#  }
 }
